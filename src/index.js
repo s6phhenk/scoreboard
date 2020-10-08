@@ -2,16 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+
+const players = [
+  {
+    name: "Guil",
+    score: 50,
+    id: 1
+  },
+  {
+    name: "Treasure",
+    score: 85,
+    id: 2
+  },
+  {
+    name: "Ashley",
+    score: 95,
+    id: 3
+  },
+  {
+    name: "James",
+    score: 80,
+    id: 4
+  }
+]
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App initialPlayers={players}/>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
